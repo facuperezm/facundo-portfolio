@@ -5,15 +5,23 @@ import {
   Box,
   Container,
   Heading,
-  VStack,
   Image,
-  HStack,
   Button,
-  useColorModeValue,
   Flex,
+  List,
+  ListItem,
+  Icon,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import {
+  IoLogoTwitter,
+  IoLogoEmail,
+  IoLogoGithub,
+  IoLogoLinkedin,
+} from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 import Span from "../components/Span";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -57,16 +65,67 @@ export default function Home() {
           I'm a freelance frontend developer looking forward to new
           opportunities in the software industry. I like building web
           applications and my goal is to make the world a better place with code
-          one day. Currently I'm learning{" "}
+          one day. Currently I'm learning
           <NextLink href="https://reactjs.org/">ReactJS</NextLink>.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/projects">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="pink">
+            <Button
+              variant="outline"
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="pink"
+            >
               My projects
             </Button>
           </NextLink>
         </Box>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Contact me
+        </Heading>
+        <Flex gap={1}>
+          <Link href="https://github.com/facuperezm" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<Icon as={IoLogoGithub} />}
+            >
+              @facuperezm
+            </Button>
+          </Link>
+
+          <Link href="https://twitter.com/FacuPerezM" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<Icon as={IoLogoTwitter} />}
+            >
+              @facuperezm
+            </Button>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/facundoperezm/"
+            target="_blank"
+          >
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<Icon as={IoLogoLinkedin} />}
+            >
+              @facuPerezM
+            </Button>
+          </Link>
+          <Link href="mailto:facundoperezmontalvo@gmail.com" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<Icon as={MdEmail} />}
+            >
+              fpm@gmail.com
+            </Button>
+          </Link>
+        </Flex>
       </Section>
     </Container>
   );

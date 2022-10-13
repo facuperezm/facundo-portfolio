@@ -4,29 +4,17 @@ const Navbar = (props) => {
   const { path } = props;
   return (
     <Box
-      position="fixed"
+      position="sticky"
       as="nav"
       w="100%"
-      bg="#20202380"
-      style={{ backdropFilter: "blur(10px)" }}
       zIndex={1}
+      height={63}
+      opacity={0.95}
+      top={0}
+      background="linear-gradient(to bottom, black 1%, transparent 99%)"
+      style={{ backdropFilter: "blur(1px)" }}
       {...props}
-    >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.sm"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-            Facundo Perez Montalvo
-          </Heading>
-        </Flex>
-      </Container>
-    </Box>
+    ></Box>
   );
 };
 
