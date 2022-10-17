@@ -11,6 +11,8 @@ import {
   List,
   ListItem,
   Icon,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
@@ -34,25 +36,35 @@ export default function Home() {
         borderRadius="lg"
         align="center"
       >
-        <Flex direction="column" align="center" p={5}>
-          <Heading as="h2" variant="page-title">
-            Facundo Perez Montalvo
-          </Heading>
-          <p>
-            <Span>Self-taught</Span> web developer currently focused on working
-            with React.js
-          </p>
-        </Flex>
-        <Image
-          borderColor="whiteAlpha.800"
-          borderWidth={3}
-          borderStyle="solid"
-          maxWidth="130px"
-          display="inline-block"
-          borderRadius="full"
-          src="/images/facundo.jpg"
-          alt="profile picture"
-        />
+        <Grid
+          direction="column"
+          templateColumns="repeat(4,1fr)"
+          templateRows="repeat(1, 1fr)"
+          justifyItems="stretch"
+          alignItems="center"
+          gap={1}
+        >
+          <GridItem colSpan={3}>
+            <Heading as="h2" variant="page-title">
+              Facundo Perez Montalvo
+            </Heading>
+            <p>
+              <Span>Frontend developer</Span>
+            </p>
+          </GridItem>
+          <GridItem colSpan={1}>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={3}
+              borderStyle="solid"
+              maxWidth="130px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/facundo.jpg"
+              alt="profile picture"
+            />
+          </GridItem>
+        </Grid>
       </Box>
       <Box>
         <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center"></Box>
