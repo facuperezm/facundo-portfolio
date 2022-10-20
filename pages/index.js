@@ -8,19 +8,12 @@ import {
   Image,
   Button,
   Flex,
-  List,
-  ListItem,
   Icon,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import {
-  IoLogoTwitter,
-  IoLogoEmail,
-  IoLogoGithub,
-  IoLogoLinkedin,
-} from "react-icons/io5";
+import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import Span from "../components/Span";
 import Link from "next/link";
@@ -74,10 +67,10 @@ export default function Home() {
           About me
         </Heading>
         <Paragraph>
-          I'm a freelance frontend developer looking forward to new
+          I&apos;m a freelance frontend developer looking forward to new
           opportunities in the software industry. I like building web
           applications and my goal is to make the world a better place with code
-          one day. Currently I'm learning
+          one day. Currently I&apos;m learning
           <NextLink href="https://reactjs.org/">ReactJS</NextLink>.
         </Paragraph>
         <Box align="center" my={4}>
