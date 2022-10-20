@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 import Span from "../components/Span";
 import Link from "next/link";
 
@@ -67,12 +66,18 @@ export default function Home() {
           About me
         </Heading>
         <Paragraph>
-          I&apos;m a freelance frontend developer looking forward to new
-          opportunities in the software industry. I like building web
-          applications and my goal is to make the world a better place with code
-          one day. Currently I&apos;m learning
-          <NextLink href="https://reactjs.org/">ReactJS</NextLink>.
+          Hi, my name is Facundo, I&apos;m a Frontend developer from Argentina
+          looking for new opportunities.
         </Paragraph>
+        <Paragraph>
+          Passionate about new technologies and building amazing products,
+          taking care of details and constantly learning.
+        </Paragraph>
+        <Paragraph>
+          Mainly focused on working with the React stack. Currently doing
+          freelance works for local bussineses providing tech solutions.
+        </Paragraph>
+
         <Box align="center" my={4}>
           <NextLink href="/projects">
             <Button
@@ -89,14 +94,10 @@ export default function Home() {
         <Heading as="h3" variant="section-title">
           Contact me
         </Heading>
-        <Flex gap={1}>
+        <Flex gap={1} align="center">
           <Link href="https://github.com/facuperezm" target="_blank">
-            <Button
-              variant="ghost"
-              colorScheme="teal"
-              leftIcon={<Icon as={IoLogoGithub} />}
-            >
-              @facuperezm
+            <Button variant="ghost" colorScheme="teal">
+              {<Icon as={IoLogoGithub} />}
             </Button>
           </Link>
 
@@ -105,9 +106,7 @@ export default function Home() {
               variant="ghost"
               colorScheme="teal"
               leftIcon={<Icon as={IoLogoTwitter} />}
-            >
-              @facuperezm
-            </Button>
+            ></Button>
           </Link>
           <Link
             href="https://www.linkedin.com/in/facundoperezm/"
@@ -117,11 +116,9 @@ export default function Home() {
               variant="ghost"
               colorScheme="teal"
               leftIcon={<Icon as={IoLogoLinkedin} />}
-            >
-              @facuPerezM
-            </Button>
+            ></Button>
           </Link>
-          <Link href="mailto:facundoperezmontalvo@gmail.com" target="_blank">
+          {/* <Link href="mailto:facundoperezmontalvo@gmail.com" target="_blank">
             <Button
               variant="ghost"
               colorScheme="teal"
@@ -129,7 +126,7 @@ export default function Home() {
             >
               fpm@gmail.com
             </Button>
-          </Link>
+          </Link> */}
         </Flex>
       </Section>
     </Container>
