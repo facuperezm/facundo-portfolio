@@ -94,10 +94,14 @@ export default function Home() {
         <Heading as="h3" variant="section-title">
           Contact me
         </Heading>
-        <Flex gap={1} align="center">
+        <Flex gap={1} justify="center">
           <Link href="https://github.com/facuperezm" target="_blank">
-            <Button variant="ghost" colorScheme="teal">
-              {<Icon as={IoLogoGithub} />}
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<Icon as={IoLogoGithub} />}
+            >
+              GitHub
             </Button>
           </Link>
 
@@ -106,7 +110,9 @@ export default function Home() {
               variant="ghost"
               colorScheme="teal"
               leftIcon={<Icon as={IoLogoTwitter} />}
-            ></Button>
+            >
+              Twitter
+            </Button>
           </Link>
           <Link
             href="https://www.linkedin.com/in/facundoperezm/"
@@ -116,7 +122,9 @@ export default function Home() {
               variant="ghost"
               colorScheme="teal"
               leftIcon={<Icon as={IoLogoLinkedin} />}
-            ></Button>
+            >
+              Linkedin
+            </Button>
           </Link>
           {/* <Link href="mailto:facundoperezmontalvo@gmail.com" target="_blank">
             <Button

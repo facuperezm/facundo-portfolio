@@ -5,7 +5,8 @@ const Footer = () => {
     <>
       <Divider />
       <Box align="center" opacity={0.4} fontSize="sm" pt={2}>
-        &copy; {new Date().getFullYear()} Facundo Perez Montalvo.
+        &copy; {new Date().getFullYear()} | Made in Argentina with ♥ by Facundo
+        Perez Montalvo.
       </Box>
     </>
   );
