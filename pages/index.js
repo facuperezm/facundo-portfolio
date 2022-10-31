@@ -21,45 +21,45 @@ export default function Home() {
   return (
     <Container maxW="container.sm" justify="center">
       <Box
-        display={{ md: "flex" }}
-        bg="#2e2e2e"
-        p={6}
-        mt={14}
-        borderRadius="lg"
-        align="center"
+        display="flex"
+        flexDirection={{ md: "row", base: "column-reverse" }}
+        justify={{ md: "center", base: "right" }}
       >
-        <Grid
-          direction="column"
-          templateColumns="repeat(4,1fr)"
-          templateRows="repeat(1, 1fr)"
-          justifyItems="stretch"
-          alignItems="center"
-          gap={1}
+        <Box flexGrow={6} alignSelf={{ md: "center" }} mb={{ base: 6 }}>
+          <Heading as="h2" variant="page-title">
+            Facundo Perez Montalvo
+          </Heading>
+          <Span>Frontend developer</Span>{" "}
+        </Box>
+        <Box
+          flexShrink={0}
+          mt={{ base: 4, md: 0 }}
+          // ml={{ md: 6 }}
+          mb={{ base: 2 }}
+          textAlign={{ md: "right", base: "left" }}
         >
-          <GridItem colSpan={3}>
-            <Heading as="h2" variant="page-title">
-              Facundo Perez Montalvo
-            </Heading>
-            <p>
-              <Span>Frontend developer</Span>
-            </p>
-          </GridItem>
-          <GridItem colSpan={1}>
-            <Image
-              borderColor="whiteAlpha.800"
-              borderWidth={3}
-              borderStyle="solid"
-              maxWidth="130px"
-              display="inline-block"
-              borderRadius="full"
-              src="/images/facundo.jpg"
-              alt="profile picture"
-            />
-          </GridItem>
-        </Grid>
+          <Image
+            borderColor="whiteAlpha.800"
+            borderWidth={3}
+            borderStyle="solid"
+            maxWidth="130px"
+            display="inline-block"
+            borderRadius="full"
+            src="/images/facundo.jpg"
+            alt="profile picture"
+          />
+        </Box>
       </Box>
       <Box>
-        <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center"></Box>
+        {/* <Box
+          mt={{ base: 4, md: 0 }}
+          ml={{ md: 6 }}
+          align="center"
+          backgroundColor="#333333"
+          borderRadius="full"
+        >
+          Hello world! Welcome to my website
+        </Box> */}
       </Box>
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
@@ -78,7 +78,7 @@ export default function Home() {
           freelance works for local bussineses providing tech solutions.
         </Paragraph>
 
-        <Box align="center" my={4}>
+        <Box align="center" my={6}>
           <NextLink href="/projects">
             <Button
               variant="outline"
@@ -94,7 +94,7 @@ export default function Home() {
         <Heading as="h3" variant="section-title">
           Contact me
         </Heading>
-        <Flex gap={1} justify="center">
+        <Flex gap={1} justify="center" mb={3}>
           <Link href="https://github.com/facuperezm" target="_blank">
             <Button
               variant="ghost"

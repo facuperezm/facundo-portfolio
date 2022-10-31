@@ -9,7 +9,7 @@ const Main = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Facundo Perez Montalvo Portfolio</title>
       </Head>
-      <VStack my={10}>{children}</VStack>
+      <VStack my={12}>{children}</VStack>
       <Footer />
     </Box>
   );
