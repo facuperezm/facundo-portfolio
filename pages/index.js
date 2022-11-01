@@ -30,7 +30,7 @@ export default function Home() {
           <Span>Frontend developer</Span>{" "}
         </Box>
         <Box
-          flexShrink={1}
+          flexShrink={0}
           mt={{ base: 4, md: 0 }}
           // ml={{ md: 6 }}
           mb={{ base: 2 }}
