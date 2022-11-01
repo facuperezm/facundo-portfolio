@@ -9,8 +9,6 @@ import {
   Button,
   Flex,
   Icon,
-  Grid,
-  GridItem,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
