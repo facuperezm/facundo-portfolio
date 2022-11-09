@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import Section from "../components/Section";
 import Paragraph from "../components/Paragraph";
 import Layout from "../components/layouts/articles";
