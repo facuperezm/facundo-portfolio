@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
 
 const Paragraph = styled.p`
-  text-align:justify
-  text-indent: 1em
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 1.2rem
+  // text-indent: 0.5em;
+  margin-bottom: 1rem;
 `;
 export default Paragraph;
