@@ -20,17 +20,26 @@ import bloggy from "../public/images/bloggy.jpeg";
 import advicegen from "../public/images/advicegen.jpeg";
 import landing from "../public/images/landing.jpeg";
 import ContactForm from "../components/Contact";
+import ThemeToggleButton from "../components/theme-toggle-button";
 
 export default function Home() {
   return (
     <Container maxW="container.md" justify="center">
+      <Box mb={10} align="right">
+        <ThemeToggleButton />
+      </Box>
       <Box
         display="flex"
         flexDirection={{ md: "row", base: "column-reverse" }}
         justify={{ md: "center", base: "right" }}
       >
-        <Box flexGrow={6} alignSelf={{ md: "center" }} mb={{ base: 6 }}>
-          <Heading as="h2" fontSize={{ md: 30, base: 25 }} variant="page-title">
+        <Box flexGrow={6} alignSelf={{ md: "center" }} mb={{ base: 8 }}>
+          <Heading
+            as="h2"
+            fontSize={{ md: 38, base: 24 }}
+            variant="page-title"
+            fontWeight="black"
+          >
             Facundo Perez Montalvo
           </Heading>
           <Span>Frontend developer</Span>{" "}
@@ -41,13 +50,11 @@ export default function Home() {
           // ml={{ md: 6 }}
           mb={{ base: 2 }}
           textAlign={{ md: "left", base: "left" }}
-          paddingRight={3}
+          // paddingRight={3}
         >
           <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={3}
             borderStyle="solid"
-            maxWidth="160px"
+            maxWidth={{ md: 250, base: 110 }}
             display="inline-block"
             borderRadius="full"
             src="/images/facundo.jpg"
@@ -56,49 +63,56 @@ export default function Home() {
         </Box>
       </Box>
       <Section delay={0.1}>
-        <Heading as="h3" fontSize={20} variant="section-title">
+        <Heading as="h3" fontSize={22} variant="section-title" mb={4}>
           About me
         </Heading>
         <Paragraph>
-          I&apos;m a developer from Argentina looking for new opportunities.
+          Hello! I&apos;m a self-taught software developer with a passion for{" "}
+          <i>front-end web development</i>, and I love to work on projects that
+          make the world a better place. My favorite part of being a frontend
+          developer is designing and building beautiful UI&apos;s that are
+          simple and user-friendly.
+          {/* I&apos;m a developer from Argentina looking for new opportunities.
           Passionate about new technologies and building amazing products,
           always taking care of details and constantly learning. I love building
-          things that are simple and user-friendly.
+          things that are simple and user-friendly. */}
         </Paragraph>
         <Paragraph>
-          I spent 8 month learning software development and I am mainly focused
-          on doing front-end with the React stack. Currently doing freelance
-          projects for local bussineses providing tech solutions.
+          I am mainly focused on doing front-end development with the React
+          stack. I love to learn new things, and I&apos;m always looking to
+          expand my skillset.
+          {/* I am currently doing
+          freelance projects for local businesses providing tech solutions. */}
         </Paragraph>
         <Paragraph>
           I&apos;m currently looking for a new role as a developer.{" "}
           <strong>Hire me?</strong>
         </Paragraph>
 
-        <Box align="center" mb={10}>
-          <Flex gap={2} justify="left" mb={3}>
-            <Link href="https://github.com/facuperezm" target="_blank">
-              <Button
-                variant="outline"
-                colorScheme="gray"
-                leftIcon={<Icon as={IoLogoGithub} />}
-                fontSize={15}
-              >
-                View GitHub
-              </Button>
-            </Link>
-
+        <Box align="center" mb={14}>
+          <Flex gap={2} justify="left">
             <Link
               href="https://www.linkedin.com/in/facundoperezm/"
               target="_blank"
             >
               <Button
-                variant="outline"
-                colorScheme="gray"
+                variant="solid"
+                colorScheme="teal"
                 leftIcon={<Icon as={IoLogoLinkedin} />}
                 fontSize={15}
               >
                 View Linkedin
+              </Button>
+            </Link>
+            <Link href="https://github.com/facuperezm" target="_blank">
+              <Button
+                variant="outline"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoGithub} />}
+                fontSize={15}
+                size="md"
+              >
+                View GitHub
               </Button>
             </Link>
           </Flex>
@@ -106,10 +120,10 @@ export default function Home() {
       </Section>
       <Section>
         <Layout>
-          <Heading as="h3" fontSize={20} variant="section-title">
+          <Heading as="h3" fontSize={22} variant="section-title">
             Projects
           </Heading>
-          <Text mb={8}>
+          <Text mb={4}>
             Some of the projects that I am currently working on:
           </Text>
           <SimpleGrid columns={[1, 2, 3]} gap={4}>
@@ -144,7 +158,7 @@ export default function Home() {
         </Layout>
       </Section>
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" fontSize={22} variant="section-title">
           Contact me
         </Heading>
         <Text mb={4}>

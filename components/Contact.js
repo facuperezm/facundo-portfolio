@@ -14,16 +14,36 @@ function ContactForm() {
   return (
     <FormControl onSubmit={handleSubmit}>
       <FormLabel htmlFor="name">Name</FormLabel>
-      <Input id="name" type="name" name="email" mb={2} />
+      <Input
+        id="name"
+        type="name"
+        name="email"
+        mb={2}
+        variant="filled"
+        focusBorderColor="pink.400"
+      />
       <FormLabel htmlFor="email">Email Address</FormLabel>
-      <Input id="email" type="email" name="email" mb={4} />
+      <Input
+        id="email"
+        type="email"
+        name="email"
+        mb={4}
+        variant="filled"
+        focusBorderColor="pink.400"
+      />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <Textarea placeholder="Send me a message" id="message" name="message" />
+      <Textarea
+        placeholder="Send me a message"
+        id="message"
+        name="message"
+        variant="filled"
+        focusBorderColor="pink.400"
+      />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button
         type="submit"
         variant="outline"
-        colorScheme="gray"
+        colorScheme="teal"
         mt={2}
         pt={1}
         disabled={state.submitting}
