@@ -1,58 +1,90 @@
-import {
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-} from "@chakra-ui/react";
-import { useForm, ValidationError } from "@formspree/react";
-function ContactForm() {
-  const [state, handleSubmit] = useForm("xrgdrrln");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-  return (
-    <FormControl onSubmit={handleSubmit}>
-      <FormLabel htmlFor="name">Name</FormLabel>
-      <Input
-        id="name"
-        type="name"
-        name="email"
-        mb={2}
-        variant="filled"
-        focusBorderColor="pink.400"
-      />
-      <FormLabel htmlFor="email">Email Address</FormLabel>
-      <Input
-        id="email"
-        type="email"
-        name="email"
-        mb={4}
-        variant="filled"
-        focusBorderColor="pink.400"
-      />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <Textarea
-        placeholder="Send me a message"
-        id="message"
-        name="message"
-        variant="filled"
-        focusBorderColor="pink.400"
-      />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <Button
-        type="submit"
-        variant="outline"
-        colorScheme="teal"
-        mt={2}
-        pt={1}
-        disabled={state.submitting}
-        fontSize={15}
-      >
-        Submit
-      </Button>
-    </FormControl>
-  );
-}
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import styled from "@emotion/styled";
+import { Button } from "@chakra-ui/react";
 
+export const ContactForm = () => {
+  const form = useRef();
+
+  const serviceid = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
+  const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ")
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  return (
+    <StyledContactForm>
+      <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <Button
+          mt={2}
+          pt={1}
+          variant="outline"
+          colorScheme="teal"
+          fontSize={15}
+          type="submit"
+          value="Send"
+        >
+          Send
+        </Button>
+      </form>
+    </StyledContactForm>
+  );
+};
 export default ContactForm;
+
+const StyledContactForm = styled.div`
+  width: 100%;
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    input {
+      width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      transition: all 0.1s ease-in-out;
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      max-height: 200px;
+      min-height: 100px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      transition: all 0.1s ease-in-out;
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
+    label {
+      margin-top: 1rem;
+    }
+  }
+`;

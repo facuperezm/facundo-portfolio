@@ -25,7 +25,7 @@ import ThemeToggleButton from "../components/theme-toggle-button";
 export default function Home() {
   return (
     <Container maxW="container.md" justify="center">
-      <Box mb={10} align="right">
+      <Box mb={5} align="right">
         <ThemeToggleButton />
       </Box>
       <Box
@@ -42,7 +42,7 @@ export default function Home() {
           >
             Facundo Perez Montalvo
           </Heading>
-          <Span>Frontend developer</Span>
+          <Span>Frontend developer based in Argentina 🇦🇷</Span>
         </Box>
         <Box
           flexShrink={1}
