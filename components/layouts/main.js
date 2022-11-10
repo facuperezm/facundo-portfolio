@@ -11,7 +11,7 @@ const Main = ({ children }) => {
         <meta name="description" content="Welcome to my website!" />
         <meta name="author" content="Facundo Perez Montalvo" />
         <meta name="author" content="Facundo" />
-        <link rel="shortcut icon" href="/public/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@facuperezm" />
         <meta name="twitter:creator" content="@facuperezm" />
