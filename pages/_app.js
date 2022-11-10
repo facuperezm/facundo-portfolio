@@ -9,7 +9,7 @@ const MyApp = ({ Component, pageProps, router }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/public/images/favicon.ico" />
+        <link rel="shortcut icon" href="/public/favicon.ico" />
       </Head>
       <ChakraProvider theme={theme}>
         <Fonts />

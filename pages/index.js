@@ -42,7 +42,7 @@ export default function Home() {
           >
             Facundo Perez Montalvo
           </Heading>
-          <Span>Frontend developer</Span>{" "}
+          <Span>Frontend developer</Span>
         </Box>
         <Box
           flexShrink={1}
