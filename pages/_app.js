@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { Box, ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import Layout from "../components/layouts/main";
 import { AnimatePresence } from "framer-motion";
 import Fonts from "../components/Fonts";
-import Navblur from "../components/navblur";
 
 const MyApp = ({ Component, pageProps, router }) => {
   return (

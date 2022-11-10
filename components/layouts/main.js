@@ -1,10 +1,8 @@
 import Head from "next/head";
-import { Box, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import Footer from "../Footer";
-import Navblur from "../navblur";
 
 const Main = ({ children }) => {
-  const color = useColorModeValue("#202023", "#f0e7db");
   return (
     <>
       <Box as="main" pb={3}>
