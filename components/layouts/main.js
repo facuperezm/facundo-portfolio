@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Box, VStack } from "@chakra-ui/react";
 import Footer from "../Footer";
-import TopBlur from "../TopBlur";
 
 const Main = ({ children }) => {
   return (
@@ -25,7 +24,7 @@ const Main = ({ children }) => {
           <meta property="og:type" content="personal website" />
           <meta property="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
         </Head>
-        <TopBlur />
+
         {/* <Box
           bgGradient="linear(180deg, #1f2028, rgba(32, 32, 35, 0.01) 80%)"
           // invert="90%"

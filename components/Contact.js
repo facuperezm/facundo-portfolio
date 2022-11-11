@@ -69,6 +69,10 @@ const StyledContactForm = styled.div`
         border: 2px solid rgba(0, 206, 158, 1);
       }
     }
+    textarea,
+    input {
+      background-color: #2b2b2b;
+    }
     textarea {
       max-width: 100%;
       min-width: 100%;
