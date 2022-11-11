@@ -12,6 +12,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { countryCodeEmoji } from "country-code-emoji";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Span from "../components/Span";
 import Link from "next/link";
@@ -25,10 +26,11 @@ import ThemeToggleButton from "../components/theme-toggle-button";
 export default function Home() {
   return (
     <Container maxW="container.md" justify="center">
-      <Box mb={5} align="right">
+      {/* <Box mb={5} align="right">
         <ThemeToggleButton />
-      </Box>
+      </Box> */}
       <Box
+        mt={20}
         display="flex"
         flexDirection={{ md: "row", base: "column-reverse" }}
         justify={{ md: "center", base: "right" }}
@@ -42,7 +44,11 @@ export default function Home() {
           >
             Facundo Perez Montalvo
           </Heading>
-          <Span>Frontend developer based in Argentina 🇦🇷</Span>
+          <Span>
+            <i>Frontend developer based in Argentina</i>
+            {"  "}
+            {countryCodeEmoji("AR")}
+          </Span>
         </Box>
         <Box
           flexShrink={1}
@@ -54,6 +60,7 @@ export default function Home() {
         >
           <Image
             borderStyle="solid"
+            boxShadow="2xl"
             maxWidth={{ md: 250, base: 110 }}
             display="inline-block"
             borderRadius="full"
