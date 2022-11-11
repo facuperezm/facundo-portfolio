@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Box, VStack } from "@chakra-ui/react";
 import Footer from "../Footer";
-import Navblur from "../TopBlur";
 import TopBlur from "../TopBlur";
 
 const Main = ({ children }) => {

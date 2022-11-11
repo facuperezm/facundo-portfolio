@@ -1,4 +1,6 @@
 import { Box, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
+import Image from "next/image";
+
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
     <LinkBox cursor="pointer">

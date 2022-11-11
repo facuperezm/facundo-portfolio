@@ -21,7 +21,6 @@ import bloggy from "../public/images/bloggy.jpeg";
 import advicegen from "../public/images/advicegen.jpeg";
 import landing from "../public/images/landing.jpeg";
 import ContactForm from "../components/Contact";
-import ThemeToggleButton from "../components/theme-toggle-button";
 
 export default function Home() {
   return (
