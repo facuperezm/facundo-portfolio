@@ -24,21 +24,6 @@ const Main = ({ children }) => {
           <meta property="og:type" content="personal website" />
           <meta property="og:image" content="https://i.imgur.com/fjL49nC.jpg" />
         </Head>
-
-        {/* <Box
-          bgGradient="linear(180deg, #1f2028, rgba(32, 32, 35, 0.01) 80%)"
-          // invert="90%"
-          position="fixed"
-          width="100%"
-          height="12%"
-          pointerEvents="none"
-          // backdropFilter="blur(1px)"
-          // opacity={0.9}
-          // backdrop-filter: blur(5px);
-          top={0}
-          left={0}
-          zIndex={5}
-        ></Box> */}
         <VStack mt={4}>{children}</VStack>
         <Footer />
       </Box>

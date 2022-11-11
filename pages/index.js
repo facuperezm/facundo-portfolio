@@ -25,50 +25,49 @@ import ContactForm from "../components/Contact";
 export default function Home() {
   return (
     <Container maxW="container.md" justify="center">
-      {/* <Box mb={5} align="right">
-        <ThemeToggleButton />
-      </Box> */}
-      <Box
-        mt={20}
-        display="flex"
-        flexDirection={{ md: "row", base: "column-reverse" }}
-        justify={{ md: "center", base: "right" }}
-      >
-        <Box flexGrow={6} alignSelf={{ md: "center" }} mb={{ base: 8 }}>
-          <Heading
-            as="h2"
-            fontSize={{ md: 38, base: 24 }}
-            variant="page-title"
-            fontWeight="black"
-          >
-            Facundo Perez Montalvo
-          </Heading>
-          <Span>
-            <i>Frontend developer based in Argentina</i>
-            {"  "}
-            {countryCodeEmoji("AR")}
-          </Span>
-        </Box>
-        <Box
-          flexShrink={1}
-          mt={{ base: 4, md: 0 }}
-          // ml={{ md: 6 }}
-          mb={{ base: 2 }}
-          textAlign={{ md: "left", base: "left" }}
-          // paddingRight={3}
-        >
-          <Image
-            borderStyle="solid"
-            boxShadow="2xl"
-            maxWidth={{ md: 250, base: 110 }}
-            display="inline-block"
-            borderRadius="full"
-            src="/images/facundo.jpg"
-            alt="profile picture"
-          />
-        </Box>
-      </Box>
       <Section delay={0.1}>
+        <Box
+          mt={20}
+          display="flex"
+          flexDirection={{ md: "row", base: "column-reverse" }}
+          justify={{ md: "center", base: "right" }}
+        >
+          <Box flexGrow={6} alignSelf={{ md: "center" }} mb={{ base: 8 }}>
+            <Heading
+              as="h2"
+              fontSize={{ md: 38, base: 24 }}
+              variant="page-title"
+              fontWeight="black"
+            >
+              Facundo Perez Montalvo
+            </Heading>
+            <Span>
+              <i>Frontend developer based in Argentina</i>
+              {"  "}
+              {countryCodeEmoji("AR")}
+            </Span>
+          </Box>
+          <Box
+            flexShrink={1}
+            mt={{ base: 4, md: 0 }}
+            // ml={{ md: 6 }}
+            mb={{ base: 2 }}
+            textAlign={{ md: "left", base: "left" }}
+            // paddingRight={3}
+          >
+            <Image
+              borderStyle="solid"
+              boxShadow="2xl"
+              maxWidth={{ md: 250, base: 110 }}
+              display="inline-block"
+              borderRadius="full"
+              src="/images/facundo.jpg"
+              alt="profile picture"
+            />
+          </Box>
+        </Box>
+      </Section>
+      <Section delay={0.2}>
         <Heading as="h3" fontSize={22} variant="section-title" mb={4}>
           About me
         </Heading>
@@ -124,7 +123,7 @@ export default function Home() {
           </Flex>
         </Box>
       </Section>
-      <Section>
+      <Section delay={0.3}>
         <Layout>
           <Heading as="h3" fontSize={22} variant="section-title">
             Projects
@@ -163,7 +162,7 @@ export default function Home() {
           </SimpleGrid>
         </Layout>
       </Section>
-      <Section delay={0.3}>
+      <Section delay={0.4}>
         <Heading as="h3" fontSize={22} variant="section-title">
           Contact me
         </Heading>
