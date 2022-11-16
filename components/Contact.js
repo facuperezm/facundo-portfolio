@@ -27,12 +27,18 @@ export const ContactForm = () => {
   return (
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
+        <label>
+          Name
+          <input type="text" name="user_name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="user_email" />
+        </label>
+        <label>
+          Message
+          <textarea name="message" />
+        </label>
         <Button
           mt={2}
           pt={1}
@@ -72,6 +78,7 @@ const StyledContactForm = styled.div`
     textarea,
     input {
       background-color: #2b2b2b;
+      width: 100%;
     }
     textarea {
       max-width: 100%;
@@ -89,6 +96,7 @@ const StyledContactForm = styled.div`
     }
     label {
       margin-top: 1rem;
+      width: 100%;
     }
   }
 `;

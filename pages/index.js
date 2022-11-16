@@ -5,7 +5,6 @@ import {
   Box,
   Container,
   Heading,
-  Image,
   Button,
   Flex,
   Icon,
@@ -21,6 +20,8 @@ import bloggy from "../public/images/bloggy.jpeg";
 import advicegen from "../public/images/advicegen.jpeg";
 import landing from "../public/images/landing.jpeg";
 import ContactForm from "../components/Contact";
+import personalImg from "../public/images/facundo.jpg";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -50,19 +51,20 @@ export default function Home() {
           <Box
             flexShrink={1}
             mt={{ base: 4, md: 0 }}
-            // ml={{ md: 6 }}
             mb={{ base: 2 }}
             textAlign={{ md: "left", base: "left" }}
-            // paddingRight={3}
+            borderRadius="full"
+            boxShadow="sm"
+            maxWidth={{ md: 250, base: 110 }}
           >
             <Image
-              borderStyle="solid"
-              boxShadow="2xl"
-              maxWidth={{ md: 250, base: 110 }}
-              display="inline-block"
-              borderRadius="full"
-              src="/images/facundo.jpg"
               alt="profile picture"
+              src={personalImg}
+              width="250px"
+              height="250px"
+              style={{ borderRadius: "50%" }}
+              placeholder="blur"
+              quality={100}
             />
           </Box>
         </Box>

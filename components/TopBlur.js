@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const TopBlur = styled.div`
   position: fixed;
   width: 100%;
-  height: 15%;
+  height: 10%;
   top: 0;
   left: 0;
   pointer-events: none;
