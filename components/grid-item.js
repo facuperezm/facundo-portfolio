@@ -1,44 +1,40 @@
 import NextLink from "next/link";
 import Image from "next/image";
-import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Box, Text, LinkBox, LinkOverlay, Button } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
 
-export const GridItem = ({ children, href, title, thumbnail }) => (
+export const ProjectGridItem = ({ children, title, thumbnail, link, repo }) => (
   <Box w="100%" align="center">
     <LinkBox cursor="pointer">
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-        loading="lazy"
-      />
-      <LinkOverlay href={href} target="_blank">
-        <Text mt={2}>{title}</Text>
+      <LinkOverlay href={link}>
+        <NextLink href={link}>
+          <Image
+            src={thumbnail}
+            alt={title}
+            className="grid-item-thumbnail"
+            placeholder="blur"
+            position="absolute"
+            objectFit="cover"
+          />
+        </NextLink>
       </LinkOverlay>
-      <Text fontSize={14}>{children}</Text>
     </LinkBox>
-  </Box>
-);
-
-export const ProjectGridItem = ({ children, title, thumbnail, link }) => (
-  <Box w="100%" align="center">
-    <NextLink href={link}>
-      <LinkBox cursor="pointer">
-        <Image
-          src={thumbnail}
-          alt={title}
-          className="grid-item-thumbnail"
-          placeholder="blur"
-        />
-        <LinkOverlay href={link}>
-          <Text my={1} fontSize={19}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
-      </LinkBox>
-    </NextLink>
+    <Text my={2} fontSize={19}>
+      {title}
+    </Text>
+    <Text fontSize={14}>{children}</Text>
+    <Box mt={3}>
+      <NextLink href={link}>
+        <Button size="sm" mx={1} variant="solid">
+          Deploy
+        </Button>
+      </NextLink>
+      <NextLink href={repo}>
+        <Button size="sm" mx={1} variant="outline">
+          Repo
+        </Button>
+      </NextLink>
+    </Box>
   </Box>
 );
 
@@ -47,6 +43,8 @@ export const GridItemStyle = () => (
     styles={`
     .grid-item-thumbnail {
     border-radius: 6px;
+    
+    overflow: hidden;
     }
     `}
   />

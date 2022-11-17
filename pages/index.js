@@ -19,6 +19,8 @@ import { ProjectGridItem } from "../components/grid-item";
 import bloggy from "../public/images/bloggy.jpeg";
 import advicegen from "../public/images/advicegen.jpeg";
 import landing from "../public/images/landing.jpeg";
+import portfolio from "../public/images/portfolio.jpeg";
+import estore from "../public/images/e-store.jpeg";
 import ContactForm from "../components/Contact";
 import personalImg from "../public/images/facundo.jpg";
 import Image from "next/image";
@@ -136,18 +138,22 @@ export default function Home() {
           <SimpleGrid columns={[1, 2, 3]} gap={4}>
             <Section>
               <ProjectGridItem
-                title="Bloggy"
-                thumbnail={bloggy}
-                link="https://bloggy-facundo.vercel.app/"
+                title="e-Store"
+                thumbnail={estore}
+                link="https://e-store-facundo.vercel.app/"
+                repo="https://github.com/facuperezm/e-Store"
               >
-                📖 Blog app made with Next.js, TailwindCSS and Firebase
+                🛒 E-commerce app made with React, TailwindCSS using Context and
+                Reducer
               </ProjectGridItem>
             </Section>
+
             <Section>
               <ProjectGridItem
                 title="Advice App"
                 thumbnail={advicegen}
                 link="https://advice-generator-facundo.vercel.app/"
+                repo="https://github.com/facuperezm/advice-generator"
               >
                 🏃‍♂️ Advice Generator made with React, Next.js and TailwindCSS
               </ProjectGridItem>
@@ -157,8 +163,29 @@ export default function Home() {
                 title="Blogr Landing Page"
                 thumbnail={landing}
                 link="https://blogr-facundo.netlify.app/"
+                repo="https://github.com/facuperezm/Blogr-LandingPage"
               >
                 🖥 Landing Page made with React and TailwindCSS
+              </ProjectGridItem>
+            </Section>
+            <Section>
+              <ProjectGridItem
+                title="Bloggy"
+                thumbnail={bloggy}
+                link="https://bloggy-facundo.vercel.app/"
+                repo="https://github.com/facuperezm/Bloggy"
+              >
+                📖 Blog app made with Next.js, TailwindCSS and Firebase
+              </ProjectGridItem>
+            </Section>
+            <Section>
+              <ProjectGridItem
+                title="Personal Website"
+                thumbnail={portfolio}
+                link="https://facuperezm.vercel.app/"
+                repo="https://github.com/facuperezm/facundo-portfolio"
+              >
+                🙋‍♂️ Personal website made with Next.js and ChakraUI
               </ProjectGridItem>
             </Section>
           </SimpleGrid>
