@@ -17,7 +17,7 @@ This is my portfolio website made with Next.js and styled with Chakra UI
 ## Acknowledgements
 
 - [Next.js Docs](https://nextjs.org/docs/getting-started)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs/installation)
+- [Chakra UI](https://chakra-ui.com/)
 
 ## Author
 
