@@ -140,7 +140,7 @@ export default function Home() {
               <ProjectGridItem
                 title="e-Store"
                 thumbnail={estore}
-                link="https://e-store-facundo.vercel.app/"
+                link="https://ecommerce-store-facundo.vercel.app/"
                 repo="https://github.com/facuperezm/e-Store"
               >
                 🛒 E-commerce app made with React, TailwindCSS using Context and
