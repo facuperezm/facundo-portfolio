@@ -7,9 +7,12 @@ const Main = ({ children }) => {
     <>
       <Box as="main" pb={3}>
         <Head>
-          <title>Facundo Perez Montalvo Portfolio</title>
+          <title>Facundo Perez Montalvo | Frontend Developer</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="Welcome to my website!" />
+          <meta
+            name="description"
+            content="Hey there! I'm Facundo and I'm currently looking for a new role as a developer. Hire me?"
+          />
           <meta name="author" content="Facundo Perez Montalvo" />
           <meta name="author" content="Facundo" />
           <link rel="shortcut icon" href="/favicon.ico" />
