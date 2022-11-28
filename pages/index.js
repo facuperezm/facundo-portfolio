@@ -65,6 +65,7 @@ export default function Home() {
             style={{ borderRadius: "50%" }}
             placeholder="blur"
             quality={95}
+            priority
           />
         </Box>
       </Box>
