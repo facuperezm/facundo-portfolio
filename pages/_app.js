@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import Fonts from "../components/Fonts";
 import TopBlur from "../components/TopBlur";
 
-const MyApp = ({ Component, pageProps, router }) => {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <TopBlur />
@@ -15,9 +15,9 @@ const MyApp = ({ Component, pageProps, router }) => {
       </Head>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <Layout router={router}>
+        <Layout>
           <AnimatePresence exitBeforeEnter initial={true}>
-            <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} />
           </AnimatePresence>
         </Layout>
       </ChakraProvider>

@@ -14,10 +14,7 @@ const NotFound = () => {
     <Container mt={16}>
       <Image src={notFoundImg} alt="not found image" />
       <Heading as="h1">404 - Not found</Heading>
-      <Text>
-        This page was not found, I&apos;m still working on this section! My bad
-        😂
-      </Text>
+      <Text>This page was not found</Text>
       <Divider my={6} />
       <Box my={6} align="center">
         <NextLink href="/">
