@@ -53,8 +53,6 @@ export default function Home() {
           mt={{ base: 4, md: 0 }}
           mb={{ base: 2 }}
           textAlign={{ md: "left", base: "left" }}
-          borderRadius="full"
-          boxShadow="sm"
           maxWidth={{ md: 250, base: 110 }}
         >
           <Image
@@ -63,9 +61,6 @@ export default function Home() {
             width="250px"
             height="250px"
             style={{ borderRadius: "50%" }}
-            placeholder="blur"
-            quality={95}
-            priority
           />
         </Box>
       </Box>
