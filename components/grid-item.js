@@ -19,10 +19,10 @@ export const ProjectGridItem = ({ children, title, thumbnail, link, repo }) => (
         </NextLink>
       </LinkOverlay>
     </LinkBox>
-    <Text my={2} fontSize={19}>
+    <Text my={2} fontSize={21}>
       {title}
     </Text>
-    <Text fontSize={14}>{children}</Text>
+    <Text fontSize={15}>{children}</Text>
     <Box mt={3}>
       <NextLink href={link}>
         <Button size="sm" mx={1} variant="solid">

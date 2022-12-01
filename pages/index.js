@@ -122,7 +122,7 @@ export default function Home() {
           <Text mb={4}>
             Some of the projects that I am currently working on:
           </Text>
-          <SimpleGrid columns={[1, 2]} gap={4}>
+          <SimpleGrid gap={4}>
             <Section>
               <ProjectGridItem
                 title="e-Store"
