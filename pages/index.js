@@ -69,20 +69,29 @@ export default function Home() {
           About me
         </Heading>
         <Text marginBottom={2}>
-          Hello! I&apos;m a self-taught software developer with a passion for{" "}
-          <i>front-end web development</i>, and I love to work on projects that
-          make the world a better place. My favorite part of being a frontend
-          developer is designing and building beautiful UI&apos;s that are
-          simple and user-friendly.
+          Hi there! My name is Facundo, and I am a passionate software developer
+          with a focus on front-end web development. With a self-taught
+          background in the React stack, I specialize in creating user-friendly,
+          visually appealing interfaces.
         </Text>
         <Text marginBottom={2}>
-          I am mainly focused on doing front-end development with the React
-          stack. I love to learn new things, and I&apos;m always looking to
-          expand my skillset.
+          As a developer, I am motivated by the desire to build solutions that
+          have a positive impact on the world. I am constantly looking for
+          opportunities to learn and grow, and I am eager to join a team of
+          like-minded individuals who share my passion for creating great
+          software.
+        </Text>
+        <Text marginBottom={2}>
+          My strengths include designing intuitive, user-friendly interfaces and
+          building them with clean, efficient code. I am always looking for new
+          challenges and opportunities to expand my skillset, and I am excited
+          about the prospect of working with a team to create something truly
+          amazing.
         </Text>
         <Text marginBottom={3}>
-          I&apos;m currently looking for a new role as a developer.{" "}
-          <strong>Hire me?</strong>
+          If you&apos;re looking for a dedicated and driven front-end developer
+          to join your team, I would love to hear from you. Let&apos;s work
+          together to create something amazing!
         </Text>
 
         <Box align="center" mb={14}>
