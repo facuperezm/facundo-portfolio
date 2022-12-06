@@ -82,11 +82,9 @@ export default function Home() {
           software.
         </Text>
         <Text marginBottom={2}>
-          My strengths include designing intuitive, user-friendly interfaces and
-          building them with clean, efficient code. I am always looking for new
-          challenges and opportunities to expand my skillset, and I am excited
-          about the prospect of working with a team to create something truly
-          amazing.
+          I am always looking for new challenges and opportunities to expand my
+          skillset, and I am excited about the prospect of working with a team
+          to create something truly amazing.
         </Text>
         <Text marginBottom={3}>
           If you&apos;re looking for a dedicated and driven front-end developer
