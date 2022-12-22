@@ -23,6 +23,7 @@ import landing from "../public/images/landing.jpeg";
 import portfolio from "../public/images/portfolio.jpeg";
 import estore from "../public/images/e-store.jpeg";
 import personalImg from "../public/images/facundo.jpg";
+import adviency from "../public/images/adviency.jpeg";
 
 export default function Home() {
   return (
@@ -79,11 +80,6 @@ export default function Home() {
           improve my skills, and I am excited to join a team of passionate
           individuals who share my love for building great software.
         </Text>
-        <Text marginBottom={2}>
-          I am always looking for new challenges and opportunities to expand my
-          skillset, and I am looking forward to work with a team to create
-          something truly amazing.
-        </Text>
         <Text marginBottom={3}>
           If you&apos;re looking for a dedicated and driven front-end developer
           to join your team, I would love to hear from you. Let&apos;s work
@@ -130,6 +126,17 @@ export default function Home() {
           <SimpleGrid gap={4}>
             <Section>
               <ProjectGridItem
+                title="Adviency 2022"
+                thumbnail={adviency}
+                link="https://adviency-facundo.vercel.app/"
+                repo="https://github.com/facuperezm/adviency"
+              >
+                🎄 Adviency is a gift list app made during december 2022. Made
+                with React, Next.js and TailwindCSS
+              </ProjectGridItem>
+            </Section>
+            <Section>
+              <ProjectGridItem
                 title="e-Store"
                 thumbnail={estore}
                 link="https://ecommerce-store-facundo.vercel.app/"
@@ -139,7 +146,6 @@ export default function Home() {
                 Reducer
               </ProjectGridItem>
             </Section>
-
             <Section>
               <ProjectGridItem
                 title="Advice App"
