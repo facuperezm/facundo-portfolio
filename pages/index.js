@@ -70,15 +70,14 @@ export default function Home() {
           About me
         </Heading>
         <Text marginBottom={2}>
-          Hi there! My name is Facundo, and I am a frontend developer. With a
-          self-taught background in the React stack, I specialize in creating
+          Hi there! My name is Facundo, and I am a front-end developer. I have a
+          self-taught background in the React stack and I specialize in creating
           user-friendly, visually appealing interfaces.
         </Text>
         <Text marginBottom={2}>
-          As a developer, I am driven by the desire to make a positive impact on
-          the world through my work. I am always seeking new ways to learn and
-          improve my skills, and I am excited to join a team of passionate
-          individuals who share my love for building great software.
+          As a developer, I am driven to make a positive impact on the world
+          through my work. I am always seeking new ways to learn and improve my
+          skills.
         </Text>
         <Text marginBottom={3}>
           If you&apos;re looking for a dedicated and driven front-end developer
