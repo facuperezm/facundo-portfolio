@@ -12,25 +12,28 @@ export const ContactForm = () => {
     reset,
   } = useForm();
 
-  const form = useRef();
   const serviceid = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
   const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
-  const sendEmail = (formData) => {
-    emailjs.send(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ").then(
-      (result) => {
-        console.log(result.text);
-        e.target.reset();
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+
+  const form = useRef();
+
+  const sendit = () => {
+    emailjs
+      .sendForm(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     reset();
   };
 
   return (
     <StyledContactForm>
-      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+      <form ref={form} onSubmit={handleSubmit(sendit)}>
         <label htmlFor="user_name">Name</label>
         <input
           {...register("user_name", { required: true, minLength: 3 })}
