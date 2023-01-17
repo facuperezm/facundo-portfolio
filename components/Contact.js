@@ -2,15 +2,20 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "@emotion/styled";
 import { Button } from "@chakra-ui/react";
+import { useForm } from "react-hook-form";
 
 export const ContactForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const form = useRef();
 
   const serviceid = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
   const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ")
       .then(
@@ -22,23 +27,44 @@ export const ContactForm = () => {
           console.log(error.text);
         }
       );
+    reset();
   };
 
   return (
     <StyledContactForm>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>
-          Name
-          <input type="text" name="user_name" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="user_email" />
-        </label>
-        <label>
-          Message
-          <textarea name="message" />
-        </label>
+      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+        <label htmlFor="user_name">Name</label>
+        <input
+          {...register("user_name", { required: true, minLength: 3 })}
+          type="text"
+          name="user_name"
+        />
+        {errors.user_name?.type === "required" && (
+          <p role="alert">Name is required</p>
+        )}
+        <label htmlFor="user_email">Email</label>
+        <input
+          {...register("user_email", {
+            required: true,
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "invalid email address",
+            },
+          })}
+          type="email"
+          name="user_email"
+        />
+        {errors.user_email?.type === "required" && (
+          <p role="alert">Email is required</p>
+        )}
+        <label htmlFor="message">Message</label>
+        <textarea
+          {...register("message", { required: true, minLength: 3 })}
+          name="message"
+        />
+        {errors.message?.type === "required" && (
+          <p role="alert">Message is required</p>
+        )}
         <Button
           mt={2}
           pt={1}
@@ -97,6 +123,10 @@ const StyledContactForm = styled.div`
     label {
       margin-top: 1rem;
       width: 100%;
+    }
+    p {
+      font-size: 0.8rem;
+      color: gray;
     }
   }
 `;
