@@ -10,20 +10,23 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const form = useRef();
 
+  const form = useRef();
   const serviceid = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
   const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
-  const sendEmail = (formData) => {
-    emailjs.sendForm(serviceid, templateid, formData, "3Kfp25amvpJXfbaFZ").then(
-      (result) => {
-        console.log(result.text);
-        e.target.reset();
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ")
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     reset();
   };
 
