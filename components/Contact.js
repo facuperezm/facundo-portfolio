@@ -15,8 +15,7 @@ export const ContactForm = () => {
   const form = useRef();
   const serviceid = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
   const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (formData) => {
     emailjs.send(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ").then(
       (result) => {
         console.log(result.text);
