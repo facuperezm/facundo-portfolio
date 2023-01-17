@@ -9,6 +9,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const form = useRef();
