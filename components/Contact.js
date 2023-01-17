@@ -17,17 +17,15 @@ export const ContactForm = () => {
   const templateid = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ")
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.send(serviceid, templateid, form.current, "3Kfp25amvpJXfbaFZ").then(
+      (result) => {
+        console.log(result.text);
+        e.target.reset();
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
     reset();
   };
 
