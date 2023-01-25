@@ -20,7 +20,7 @@ import Image from "next/image";
 import bloggy from "../public/images/bloggy.jpeg";
 import advicegen from "../public/images/advicegen.jpeg";
 import landing from "../public/images/landing.jpeg";
-import portfolio from "../public/images/portfolio.jpeg";
+import heraldo from "../public/images/heraldo.jpeg";
 import estore from "../public/images/e-store.jpeg";
 import personalImg from "../public/images/facundo.jpg";
 import adviency from "../public/images/adviency.jpeg";
@@ -61,7 +61,7 @@ export default function Home() {
             src={personalImg}
             width="250px"
             height="250px"
-            style={{ borderRadius: "50%" }}
+            style={{ borderRadius: "15%" }}
           />
         </Box>
       </Box>
@@ -70,19 +70,18 @@ export default function Home() {
           About me
         </Heading>
         <Text marginBottom={2}>
-          Hi there! My name is Facundo, and I am a front-end developer. I have a
-          self-taught background in the React stack and I specialize in creating
-          user-friendly, visually appealing interfaces.
+          Hey! I&apos;m Facundo, a frontend developer with a self-taught
+          background in the React stack. I specialize in creating user-friendly,
+          visually appealing interfaces.
         </Text>
         <Text marginBottom={2}>
-          As a developer, I am driven to make a positive impact on the world
-          through my work. I am always seeking new ways to learn and improve my
-          skills.
+          I&apos;m driven to make a positive impact on the world through my work
+          and I&apos;m always seeking to learn and improve my skills.
         </Text>
         <Text marginBottom={3}>
-          If you&apos;re looking for a dedicated and driven front-end developer
-          to join your team, I would love to hear from you. Let&apos;s work
-          together to create something amazing!
+          If you&apos;re looking for a dedicated frontend developer to join your
+          team, I would love to hear from you. Let&apos;s work together to
+          create something amazing!
         </Text>
 
         <Box align="center" mb={14}>
@@ -125,13 +124,27 @@ export default function Home() {
           <SimpleGrid gap={4}>
             <Section>
               <ProjectGridItem
+                title="Loco Heraldo's Menu"
+                thumbnail={heraldo}
+                link="https://locoheraldo.vercel.app/"
+                repo="https://github.com/facuperezm/locoheraldo-menu"
+              >
+                🍕 Freelance work for a local restaurant. Made with React,
+                Next.js and TailwindCSS using Google Sheets as a database for
+                easy management of the menu. Uses i18n for internationalization
+                of the site. Deployed on Vercel.
+              </ProjectGridItem>
+            </Section>
+            <Section>
+              <ProjectGridItem
                 title="Adviency 2022"
                 thumbnail={adviency}
                 link="https://adviency-facundo.vercel.app/"
                 repo="https://github.com/facuperezm/adviency"
               >
-                🎄 Adviency is a gift list app made during december 2022. Made
-                with React, Next.js and TailwindCSS
+                🎄 Adviency is a gift list app made during december 2022 that
+                features a gift list and a budget tracker. Made with React,
+                Next.js and TailwindCSS and uses LocalStorage to store data.
               </ProjectGridItem>
             </Section>
             <Section>
@@ -141,8 +154,8 @@ export default function Home() {
                 link="https://ecommerce-store-facundo.vercel.app/"
                 repo="https://github.com/facuperezm/e-Store"
               >
-                🛒 E-commerce app made with React, TailwindCSS using Context and
-                Reducer
+                🛒 E-commerce store that uses the Fake Store API. Made with
+                React, Vite, TailwindCSS using Context API and React Router.
               </ProjectGridItem>
             </Section>
             <Section>
@@ -152,7 +165,8 @@ export default function Home() {
                 link="https://advice-generator-facundo.vercel.app/"
                 repo="https://github.com/facuperezm/advice-generator"
               >
-                🏃‍♂️ Advice Generator made with React, Next.js and TailwindCSS
+                🏃‍♂️ Advice Generator is a simple app that generates random advice
+                made with React, TailwindCSS and the Advice Slip API.
               </ProjectGridItem>
             </Section>
             <Section>
@@ -162,7 +176,7 @@ export default function Home() {
                 link="https://blogr-facundo.netlify.app/"
                 repo="https://github.com/facuperezm/Blogr-LandingPage"
               >
-                🖥 Landing Page made with React and TailwindCSS
+                🖥 Landing Page made with React and TailwindCSS.
               </ProjectGridItem>
             </Section>
             <Section>
@@ -172,17 +186,8 @@ export default function Home() {
                 link="https://bloggy-facundo.vercel.app/"
                 repo="https://github.com/facuperezm/Bloggy"
               >
-                📖 Blog app made with Next.js, TailwindCSS and Firebase
-              </ProjectGridItem>
-            </Section>
-            <Section>
-              <ProjectGridItem
-                title="Personal Website"
-                thumbnail={portfolio}
-                link="https://facuperezm.vercel.app/"
-                repo="https://github.com/facuperezm/facundo-portfolio"
-              >
-                🙋‍♂️ Personal website made with Next.js and ChakraUI
+                📖 Blog app featuring posts and comments made with Next.js,
+                TailwindCSS and Firebase as a database.
               </ProjectGridItem>
             </Section>
           </SimpleGrid>

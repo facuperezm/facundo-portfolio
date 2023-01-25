@@ -11,7 +11,7 @@ const Main = ({ children }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
-            content="Hey there! I'm Facundo and I'm currently looking for a new role as a developer. Hire me?"
+            content="Hey there! I'm currently looking for a new role as a developer. Hire me?"
           />
           <meta name="author" content="Facundo Perez Montalvo" />
           <meta name="author" content="Facundo" />
